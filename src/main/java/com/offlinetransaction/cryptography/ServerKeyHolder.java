@@ -18,6 +18,8 @@ public class ServerKeyHolder {
 
     private KeyPair keyPair;
 
+    //whenever beans will be created the system will generate these two keys out of which public will be shared to devices
+    //and the public one will be stored on server only
     @PostConstruct
     public void init() throws Exception{
 

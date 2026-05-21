@@ -63,11 +63,11 @@ public class PaymentInstruction {
         this.amount = amount;
     }
 
-    public String getRecipientVpa() {
+    public String getReceiverVpa() {
         return recipientVpa;
     }
 
-    public void setRecipientVpa(String recipientVpa) {
+    public void setReceiverVpa(String recipientVpa) {
         this.recipientVpa = recipientVpa;
     }
 
