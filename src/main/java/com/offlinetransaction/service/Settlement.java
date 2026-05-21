@@ -23,11 +23,11 @@ public class Settlement {
     public Transaction settle(PaymentInstruction instruction, String packetHash,
                               String bridgeNodeId, int hopCount) {
 
-        Account sender = accounts.findById(Integer.valueOf(instruction.getSenderVpa()))
+        Account sender = accounts.findById(instruction.getSenderVpa())
                 .orElseThrow(() -> new IllegalArgumentException(
                         "Unknown sender VPA: " + instruction.getSenderVpa()));
 
-        Account receiver = accounts.findById(Integer.valueOf(instruction.getReceiverVpa()))
+        Account receiver = accounts.findById(instruction.getReceiverVpa())
                 .orElseThrow(() -> new IllegalArgumentException(
                         "Unknown receiver VPA: " + instruction.getReceiverVpa()));
 
